@@ -43,10 +43,13 @@
     },
   ];
 
-  const logPerson = (user: Person) => {
-    console.log(`${user.name}, ${user.age}`);
+  const logPerson = (user: Person) => {    
+    const extraInfo = 'role' in user ? user.role : user.group;
+
+    console.log(`${user.name}, ${user.age}, ${extraInfo}`);
   }
 
   persons.forEach(logPerson);
+  
 }
 
