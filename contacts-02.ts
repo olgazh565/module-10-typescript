@@ -8,8 +8,7 @@
   type Admin = {
     name: string;
     age: number;
-    group: string;
-    role?: string;
+    role: string;
   };
 
   type Person = User | Admin;
@@ -48,6 +47,6 @@
     console.log(`${user.name}, ${user.age}`);
   }
 
-  console.log('Users:');
   persons.forEach(logPerson);
 }
+

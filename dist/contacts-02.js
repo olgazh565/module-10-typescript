@@ -32,6 +32,5 @@
     const logPerson = (user) => {
         console.log(`${user.name}, ${user.age}`);
     };
-    console.log('Users:');
     persons.forEach(logPerson);
 }
