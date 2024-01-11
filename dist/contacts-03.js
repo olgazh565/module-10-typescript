@@ -1,10 +1,13 @@
 "use strict";
 {
+    ;
+    ;
     const persons = [
         {
             name: 'Иван Петров',
             age: 27,
             group: 'SEO-специалист',
+            role: 'Администратор'
         },
         {
             name: 'Марат Aляуддинов',
@@ -25,11 +28,12 @@
             name: 'Том Круз',
             age: 50,
             group: 'Актер',
+            role: 'Администратор',
         },
     ];
     const logPerson = (user) => {
-        console.log(`${user.name}, ${user.age}`);
+        const extraInfo = 'role' in user ? user.role : user.group;
+        console.log(`${user.name}, ${user.age}, ${extraInfo}`);
     };
-    console.log('Users:');
     persons.forEach(logPerson);
 }

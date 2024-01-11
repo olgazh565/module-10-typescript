@@ -1,11 +1,11 @@
 {
-  type User = {
+  interface User {
     name: string;
     age: number;
     group: string;
   };
 
-  type Admin = {
+  interface Admin {
     name: string;
     age: number;
     role: string;
@@ -43,13 +43,13 @@
     },
   ];
 
-  const logPerson = (user: Person) => {    
+  const logPerson = (user: Person) => {
     const extraInfo = 'role' in user ? user.role : user.group;
 
     console.log(`${user.name}, ${user.age}, ${extraInfo}`);
   }
 
   persons.forEach(logPerson);
-  
+
 }
 
