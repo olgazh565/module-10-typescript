@@ -3,7 +3,7 @@ import { DiscountOnAmountSelling } from "./DiscountOnAmountSelling";
 import { FixedDiscountSelling } from "./FixedDiscountSelling";
 import { Product } from "./Product";
 
-let productArray: AbstractSelling[] = [];
+let products: AbstractSelling[] = [];
 
 const chips = new DiscountOnAmountSelling(new Product('Чипсы', 5), 10, 3);
 const juice = new DiscountOnAmountSelling(new Product('Сок', 6), 3, 2);
@@ -15,10 +15,10 @@ const book = new FixedDiscountSelling(new Product('Книга', 50), 3);
 const hoodie = new FixedDiscountSelling(new Product('Толстовка', 90), 2);
 const bag = new FixedDiscountSelling(new Product('Сумка', 130), 2);
 
-productArray.push(chips, juice, cookies, icecream, lamp, book, hoodie, bag);
+products.push(chips, juice, cookies, icecream, lamp, book, hoodie, bag);
 
-console.log('productArrayNotSorted: ', productArray);
+console.log('productsNotSorted: ', products);
 
-productArray.sort(AbstractSelling.compare);
+products.sort(AbstractSelling.compare);
 
-console.log('productArraySorted: ', productArray);
+console.log('productsSorted: ', products);

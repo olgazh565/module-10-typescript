@@ -18,4 +18,4 @@ export class DiscountOnAmountSelling extends AbstractSelling {
       return +(this.product.productPrice * this.count).toFixed(2);
     }    
   }
-}
+};

@@ -18,3 +18,4 @@ class DiscountOnAmountSelling extends AbstractSelling_1.AbstractSelling {
     }
 }
 exports.DiscountOnAmountSelling = DiscountOnAmountSelling;
+;
