@@ -19,6 +19,6 @@ products.push(chips, juice, cookies, icecream, lamp, book, hoodie, bag);
 
 console.log('productsNotSorted: ', products);
 
-products.sort(AbstractSelling.compare);
+products.sort((a, b) => a.compare(b));
 
 console.log('productsSorted: ', products);

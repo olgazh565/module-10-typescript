@@ -27,7 +27,9 @@ export abstract class AbstractSelling {
 
   abstract getPrice(): number;
 
-  static compare(a: AbstractSelling, b: AbstractSelling): number {
-    return b.getPrice() - a.getPrice();
+  compare(a: AbstractSelling): number {
+    if (a.getPrice() > this.getPrice()) return 1;
+    if (a.getPrice() < this.getPrice()) return -1;
+    return 0;
   }
 };

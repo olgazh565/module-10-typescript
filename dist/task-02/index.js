@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const AbstractSelling_1 = require("./AbstractSelling");
 const DiscountOnAmountSelling_1 = require("./DiscountOnAmountSelling");
 const FixedDiscountSelling_1 = require("./FixedDiscountSelling");
 const Product_1 = require("./Product");
@@ -15,5 +14,5 @@ const hoodie = new FixedDiscountSelling_1.FixedDiscountSelling(new Product_1.Pro
 const bag = new FixedDiscountSelling_1.FixedDiscountSelling(new Product_1.Product('Сумка', 130), 2);
 products.push(chips, juice, cookies, icecream, lamp, book, hoodie, bag);
 console.log('productsNotSorted: ', products);
-products.sort(AbstractSelling_1.AbstractSelling.compare);
+products.sort((a, b) => a.compare(b));
 console.log('productsSorted: ', products);
