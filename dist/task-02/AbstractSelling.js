@@ -18,10 +18,12 @@ class AbstractSelling {
     set productQuantity(quantity) {
         this.count = quantity;
     }
-    compare(a) {
-        if (a.getPrice() > this.getPrice())
+    compare(product) {
+        const a = product.getPrice();
+        const b = this.getPrice();
+        if (a > b)
             return 1;
-        if (a.getPrice() < this.getPrice())
+        if (a < b)
             return -1;
         return 0;
     }
